@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="users.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Management</title>
+  </head>
+  <body>
+    <ul class="header-list">
+      <li><a href="/">Blogs</a></li>
+      <li><a href="/about">about</a></li>
+      <li><a href="#">New Blog</a></li>
+    </ul>
+    <h1>Users</h1>
+    <form action="/api/users" method="POST">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="text" name="username" placeholder="Username" required />
+      <input type="email" name="email" placeholder="Email" required />
+    </form>
+    <ul>
+      <% users.forEach(user => { %>
+      <li><%= user.name %> (<%= user.username %>) - <%= user.email %></li>
+      <% }) %>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  text-decoration: none;
+}
+ul > li {
+  list-style: none;
+}
+.header-list {
+  display: flex;
+  align-items: center;
+}
